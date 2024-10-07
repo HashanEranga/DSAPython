@@ -4,8 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>6a2db7c7-c50d-4381-a7d5-6872d52f9636</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>
-    </StartupFile>
+    <StartupFile>linkedList\main.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -26,6 +25,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="linkedList\LinkedList.py" />
+    <Compile Include="linkedList\main.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="linkedList\Node.py" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
