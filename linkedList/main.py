@@ -23,3 +23,7 @@ l_list.insert_at_end(532)
 print("printing the list")
 l_list.print_nodes_list()
 
+print("printing the list to test insert at kth position")
+l_list.insert_at_front(5)
+l_list.insert_at_k(1234, 2)
+l_list.print_nodes_list()

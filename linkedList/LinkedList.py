@@ -33,6 +33,28 @@ class LinkedList:
         # 5. make the new node the last node
         current_node.next = new_node
 
+    def insert_at_k(self, value, k):
+        new_node = Node(value)
+        current_node = self.head
+
+        # 1. if there are no elements present add the node at first
+        if self.head is None:
+            self.head = new_node
+            return
+
+        # 2. traverse till the kth position
+        for _ in range(k-1):
+            current_node = current_node.next
+
+        # 3.
+        new_node.next = current_node.next
+
+        # 4.
+        current_node.next = new_node
+
+
+
+
     def get_head_value(self):
         # 1. if the list is not empty, return the value of the head
         if self.head is not None:
