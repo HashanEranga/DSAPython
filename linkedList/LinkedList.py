@@ -4,6 +4,7 @@ class LinkedList:
     # initialize a linked list
     def __init__(self):
         self.head = None
+        self.tail = None
 
     def insert_at_front(self, value):
         # 1. create a new node
@@ -14,6 +15,9 @@ class LinkedList:
 
         # 3. make the new node the head
         self.head = new_node
+
+        if self.tail is None:
+            self.tail = self.head
 
     def insert_at_end(self, value):
         # 1. create a new node
@@ -32,6 +36,16 @@ class LinkedList:
 
         # 5. make the new node the last node
         current_node.next = new_node
+
+    def insert_at_end_efficient(self, value):
+        new_node = Node(value)
+        if self.head is None:
+            self.head = new_node
+            self.tail = new_node
+            return
+
+        self.tail.next = new_node
+        self.tail = new_node
 
     def insert_at_k(self, value, k):
         new_node = Node(value)
